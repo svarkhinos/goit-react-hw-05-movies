@@ -1,0 +1,9 @@
+.item {
+  display: flex;
+  padding-bottom: 5px;
+  border-bottom: 2px solid grey;
+}
+
+.description {
+  margin-left: 15px;
+}
