@@ -1,12 +1,27 @@
 import { NavLink } from 'react-router-dom';
-import s from './Navigation.module.css';
 
 const Navigation = () => (
   <nav>
-    <NavLink exact="true" to="/" className="link">
+    <NavLink
+      to="/"
+      className="link"
+      style={({ isActive }) => {
+        return {
+          color: isActive ? '#1e90ff' : 'dimgrey',
+        };
+      }}
+    >
       Home
     </NavLink>
-    <NavLink to="/movies" className="link">
+    <NavLink
+      to="/movies"
+      className="link"
+      style={({ isActive }) => {
+        return {
+          color: isActive ? '#1e90ff' : 'dimgrey',
+        };
+      }}
+    >
       Movies
     </NavLink>
   </nav>

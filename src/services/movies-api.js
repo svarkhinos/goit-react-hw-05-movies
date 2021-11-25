@@ -23,3 +23,15 @@ export function fetchCastById(id) {
     `${BASE_URL}/movie/${id}/credits?api_key=${KEY}`,
   );
 }
+
+export function fetchReviewsById(id) {
+  return fetchWithErrorHandling(
+    `${BASE_URL}/movie/${id}/reviews?api_key=${KEY}`,
+  );
+}
+
+export function fetchMoviesByQuery(query) {
+  return fetchWithErrorHandling(
+    `${BASE_URL}/search/movie?api_key=${KEY}&query=${query}`,
+  );
+}
